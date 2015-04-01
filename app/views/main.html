@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Rate die Nummer !!! (!Fibonacci)</h2>
+  <p class="well lead">Rate die Nummer, Computer generiert, zwischen 1 und 100</p>
+  <label>Deine Schätzung: </label> <input type="number" ng-model="guess">
+  <button ng-click="verifyGuess()" class="btn btn-primary btn-sm">Prüfe</button>
+  <button ng-click="initializeGame()" class="btn btn-warning btn-sm">Neu Starten</button>
+  <p>
+    <p ng-show="deviation < 0" class="alert alert-warning">Deine Schätzung ist höher</p>
+    <p ng-show="deviation > 0" class="alert alert-warning">Deine Schätzung ist niedriger</p>
+    <p ng-show="deviation === 0" class="alert alert-success">Glückwunsch!!! Du hast getroffen!</p>
+  </p>
+  <p class="text-info">Zahl der Versuche: <span class="badge">{{numTries}}</span></p>
+</div>
